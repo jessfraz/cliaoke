@@ -24,6 +24,8 @@ pip install cli-aoke
 
 **View song choices**
 
+**NOTE**: You must run first  `cli-aoke songs` once before running `sing` because it scrapes a site for the `.mid` files to initialize your songs directory
+
 ```bash
 $ cli-aoke songs
 ```
@@ -32,4 +34,12 @@ $ cli-aoke songs
 
 ```bash
 $ cli-aoke sing <song_file_name>
+```
+
+## Example
+
+```bash
+$ cli-aoke songs
+$ cli-aoke sing Blackstreet_-_No_Diggity.mid
+$ cli-aoke sing 2Pac_-_California.mid
 ```

@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+
+import sys
+from src import lyrics
+from src import songs
+import time
+import threading
+from threading import Thread
+
+if __name__ == "__main__":
+    if sys.argv[1] == "songs":
+        songs.get()
+    elif sys.argv[1] == "sing":
+        song_file = sys.argv[2]
+        lyrics = lyrics.get(sys.argv[2])
+        if lyrics is None:
+            print 'Search for %s returned zero results. Sowwwy' % song_file
+        else:
+            # run the file
+
+            def func1():
+                songs.play(song_file)
+
+            def func2():
+                for line in lyrics.splitlines():
+                    print(line)
+                    time.sleep(1)
+            Thread(target=func1).start()
+            Thread(target=func2).start()
+
+    else:
+        print "Usage ===>"
+        print ""
+        print "           songs: lists the song files you can choose from"
+        print ""
+        print "           sing:  starts a song!"
