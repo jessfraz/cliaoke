@@ -17,7 +17,7 @@ $ mv GeneralUser\ GS\ 1.44\ FluidSynth/GeneralUser\ GS\ FluidSynth\ v1.44.sf2 /u
 ## Installation
 
 ```bash
-pip install cli-aoke
+$ pip install cli-aoke
 ```
 
 ## Usage
@@ -40,6 +40,7 @@ $ cli-aoke sing <song_file_name>
 
 ```bash
 $ cli-aoke songs
+$ cli-aoke sing Jay-Z_-_Hard_Knock_Life.mid
 $ cli-aoke sing Blackstreet_-_No_Diggity.mid
 $ cli-aoke sing 2Pac_-_California.mid
 ```
