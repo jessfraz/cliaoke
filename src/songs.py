@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 
 from os import walk, path, makedirs
-from subprocess import Popen
-import sys
+from subprocess import Popen, PIPE
 from . import scrape
+
+
+def exists(song_file):
+    home = path.expanduser("~")
+    return path.isfile(path.join(home, ".cliaoke", song_file))
 
 
 def get():
@@ -36,7 +40,8 @@ def play(song_file):
         print "%s does not exist" % song_file
         return None
     else:
-        p1 = Popen(["fluidsynth", "-i", sound_font_file, song_path])
-        output = p1.communicate()[0]
-        print output
-        return output
+        fs = Popen(["fluidsynth", "-i", sound_font_file, song_path],
+                   stdout=PIPE, stderr=PIPE)
+        stderr = fs.communicate()[1]
+        if stderr is not None:
+            print stderr

@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name="cli-aoke",
-    version="1.0.0",
+    version="1.1.0",
     author="Jessica Frazelle",
     author_email="jfrazelle@me.com",
     url="https://github.com/jfrazelle/cli-aoke",
