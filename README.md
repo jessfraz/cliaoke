@@ -55,3 +55,5 @@ $ cli-aoke sing Jay-Z_-_Hard_Knock_Life.mid
 $ cli-aoke sing Blackstreet_-_No_Diggity.mid
 $ cli-aoke sing 2Pac_-_California.mid
 ```
+
+[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/cli-aoke/README.md)](https://github.com/jfrazelle/cli-aoke)
