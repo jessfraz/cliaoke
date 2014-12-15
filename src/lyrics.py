@@ -2,6 +2,7 @@
 
 import re
 from bs4 import BeautifulSoup
+from os import path
 import urllib2
 
 
@@ -69,6 +70,15 @@ def get(song_file):
     # search for the lyrics
     link = fetch_search_top_link(song_query)
     if link is not None:
-        return fetch_lyrics(link)
+        song_lyrics = fetch_lyrics(link)
+        save(song_file, song_lyrics)
+        return song_lyrics
     else:
         return None
+
+def save(song_file, song_lyrics):
+    print 'saving lyrics to accessible later'
+    home = path.expanduser("~")
+    lyrics_file = path.join(home, ".cliaoke/lyrics/" + song_file.replace('.mid','.txt'))
+    with open(lyrics_file, 'w') as f :
+        f.write(song_lyrics)
