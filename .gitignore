@@ -1,5 +1,10 @@
 ###Python###
 
+# scratch ipynb file and log
+.ipynb_checkpoints
+understanding_src_code.ipynb
+nohup.out
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
