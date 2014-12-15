@@ -20,7 +20,6 @@ def get():
         makedirs(cliaoke_dir + "/lyrics")
         # scrapre for the songs
         print "Getting .mid files"
-        print cliaoke_dir + "/songs"
         scrape.do(cliaoke_dir + "/songs")
 
     # print the songs
