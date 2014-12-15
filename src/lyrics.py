@@ -64,12 +64,22 @@ def clean_input(song_file):
 
 
 def get(song_file):
+    # first checking lyrics folder
+    home = path.expanduser("~")
+    lyrics_file = path.join(home, ".cliaoke/lyrics/" + song_file.replace('.mid','.txt'))
+    if path.exists(lyrics_file):
+        print 'Lyrics already downloaded! Getting them from the lyrics folder.'
+        f = open(lyrics_file, 'r')
+        return f.read()
+
+    print 'Lyrics have not been downloaded yet. Downloading lyrics.'
     # clean it
     song_query = clean_input(song_file)
 
     # search for the lyrics
     link = fetch_search_top_link(song_query)
     if link is not None:
+        # storing lyrics for later use
         song_lyrics = fetch_lyrics(link)
         save(song_file, song_lyrics)
         return song_lyrics
@@ -77,7 +87,7 @@ def get(song_file):
         return None
 
 def save(song_file, song_lyrics):
-    print 'saving lyrics to accessible later'
+    print 'Saving lyrics to be accessible later'
     home = path.expanduser("~")
     lyrics_file = path.join(home, ".cliaoke/lyrics/" + song_file.replace('.mid','.txt'))
     with open(lyrics_file, 'w') as f :
