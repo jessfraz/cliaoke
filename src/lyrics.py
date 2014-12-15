@@ -81,14 +81,12 @@ def get(song_file):
     if link is not None:
         # storing lyrics for later use
         song_lyrics = fetch_lyrics(link)
-        save(song_file, song_lyrics)
+        save(lyrics_file, song_lyrics)
         return song_lyrics
     else:
         return None
 
-def save(song_file, song_lyrics):
+def save(lyrics_file, song_lyrics):
     print 'Saving lyrics to be accessible later'
-    home = path.expanduser("~")
-    lyrics_file = path.join(home, ".cliaoke/lyrics/" + song_file.replace('.mid','.txt'))
     with open(lyrics_file, 'w') as f :
         f.write(song_lyrics)
