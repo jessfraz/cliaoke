@@ -1,6 +1,7 @@
 ###Python###
 
 # scratch ipynb file and log
+.ipynb_checkpoints
 understanding_src_code.ipynb
 nohup.out
 
