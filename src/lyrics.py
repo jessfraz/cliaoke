@@ -19,9 +19,11 @@ def fetch_lyrics(url):
     else:
         # go on with your life
         html = response.read()
-
+        search_term = ("<!-- Usage of azlyrics.com content by "
+                       "any third-party lyrics provider is prohibited "
+                       "by our licensing agreement. Sorry about that. -->")
         lyrics = re.search(
-            b'<!-- start of lyrics -->(?:\r\n)+(.+)(?:\r\n)+<!-- end of lyrics -->', html, re.DOTALL)
+            b'%s(?:\r\n)+(.+)(?:\r\n)+</div>' % search_term, html, re.DOTALL)
         if lyrics:
             # Strip html tags from decoded lyrics
             return re.sub(r'<.+>', '', lyrics.group(1).decode('utf8'))
@@ -48,7 +50,7 @@ def fetch_search_top_link(song_query):
 
         # pass the html to BeautifulSoup
         soup = BeautifulSoup(html)
-        results = soup.find(id="inn")
+        results = soup.find('td')
         if results is not None:
             atag = results.find('a')
             if atag is not None:
@@ -90,3 +92,4 @@ def save(lyrics_file, song_lyrics):
     print 'Saving lyrics to be accessible later'
     with open(lyrics_file, 'w') as f :
         f.write(song_lyrics)
+
