@@ -7,8 +7,10 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"text/tabwriter"
 
 	"github.com/Sirupsen/logrus"
+	"github.com/docker/docker/pkg/term"
 	"github.com/jfrazelle/cliaoke/karaoke"
 )
 
@@ -78,7 +80,16 @@ func main() {
 			logrus.Fatal(err)
 		}
 
-		fmt.Printf("songs: %#v", songs)
+		// print songs table
+		_, stdout, _ := term.StdStreams()
+		w := tabwriter.NewWriter(stdout, 20, 1, 3, ' ', 0)
+
+		// print header
+		fmt.Fprintln(w, "TITLE\tARTIST")
+		for _, song := range songs {
+			fmt.Fprintf(w, "%s\t%s\n", song.Title, song.Artist)
+		}
+		w.Flush()
 		return
 	}
 

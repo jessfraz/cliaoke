@@ -15,7 +15,8 @@ const (
 )
 
 var (
-	re = regexp.MustCompile(`<!-- Usage of azlyrics.com content by any third-party lyrics provider is prohibited by our licensing agreement. Sorry about that. -->((.|\n|\r)*?)</div>`)
+	re     = regexp.MustCompile(`<!-- Usage of azlyrics.com content by any third-party lyrics provider is prohibited by our licensing agreement. Sorry about that. -->((.|\n|\r)*?)</div>`)
+	reHTML = regexp.MustCompile(`<.+>`)
 )
 
 func Search(query string) (string, error) {
@@ -54,5 +55,8 @@ func Search(query string) (string, error) {
 		return "", fmt.Errorf("[%s] regex parsing failed for body:\n%s\n", query, body)
 	}
 
-	return html[0], nil
+	// strip html tags from decoded lyrics
+	lyrics := reHTML.ReplaceAllString(html[0], "")
+
+	return lyrics, nil
 }
