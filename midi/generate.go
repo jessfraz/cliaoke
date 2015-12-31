@@ -4,12 +4,14 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
 
 	"github.com/jfrazelle/cliaoke/karaoke"
+	"github.com/jfrazelle/cliaoke/lyrics"
 )
 
 func getSongArtistAndTitle(name string) (string, string) {
@@ -51,6 +53,29 @@ func main() {
 			}
 
 			s.Artist, s.Title = getSongArtistAndTitle(f.Name())
+
+			// initialize the lyrics client
+			mmAPIKey := os.Getenv("MUSIXMATCH_APIKEY")
+			if mmAPIKey == "" {
+				panic("MUSIXMATCH_APIKEY cannot be blank.")
+			}
+			c := &lyrics.Client{Token: mmAPIKey}
+
+			// search for the track
+			track, err := c.SearchTrack(s.Artist + " " + s.Title)
+			if err != nil {
+				panic(err)
+			}
+
+			fmt.Printf("Got track for %s - %s:\n%#v\n\n", s.Artist, s.Title, track)
+
+			// get the lyrics
+			s.Lyrics, err = c.GetTrackLyrics(track)
+			if err != nil {
+				panic(err)
+			}
+
+			fmt.Printf("got song:\n%#v\n\n", s)
 
 			songs = append(songs, s)
 		}

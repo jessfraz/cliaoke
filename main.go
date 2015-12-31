@@ -87,17 +87,17 @@ func main() {
 }
 
 func getSongList() (songs []karaoke.Song, err error) {
-	url := midiURI + "/manifest.json"
-	resp, err := http.Get(url)
+	uri := midiURI + "/manifest.json"
+	resp, err := http.Get(uri)
 	if err != nil {
-		return songs, fmt.Errorf("request to %s failed: %v", url, err)
+		return songs, fmt.Errorf("request to %s failed: %v", uri, err)
 	}
 	defer resp.Body.Close()
 
 	// decode the body
 	dec := json.NewDecoder(resp.Body)
 	if err := dec.Decode(&songs); err != nil {
-		return songs, fmt.Errorf("decoding midi manifest response failed: %v", err)
+		return songs, fmt.Errorf("decoding response from %s failed: %v", uri, err)
 	}
 
 	return songs, nil
