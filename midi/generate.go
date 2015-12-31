@@ -4,26 +4,34 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
 
+	"github.com/cloudflare/cfssl/log"
 	"github.com/jfrazelle/cliaoke/karaoke"
 	"github.com/jfrazelle/cliaoke/lyrics"
 )
 
-func getSongArtistAndTitle(name string) (string, string) {
+func getSongArtistAndTitle(name string) (artist string, title string) {
 	name = strings.TrimSuffix(name, ".mid")
 	name = strings.Replace(name, "_", " ", -1)
 
 	parts := strings.SplitN(name, "-", 2)
 	if len(parts) < 2 {
 		// then the song has no artist, for example "Sonic The Hedgehog"
-		return "", strings.TrimSpace(parts[0])
+		title = strings.TrimSpace(parts[0])
+	} else {
+		artist = strings.TrimSpace(parts[0])
+		title = strings.TrimSpace(parts[1])
 	}
-	return strings.TrimSpace(parts[0]), strings.TrimSpace(parts[1])
+
+	// clean up grammar for searching for lyrics
+	title = strings.Replace(title, "Dont", "Don't", -1)
+	title = strings.Replace(title, "Adams", "Adam's", -1)
+
+	return artist, title
 }
 
 // Reads all .mid files in the current folder and creates a manifest.json with
@@ -54,28 +62,11 @@ func main() {
 
 			s.Artist, s.Title = getSongArtistAndTitle(f.Name())
 
-			// initialize the lyrics client
-			mmAPIKey := os.Getenv("MUSIXMATCH_APIKEY")
-			if mmAPIKey == "" {
-				panic("MUSIXMATCH_APIKEY cannot be blank.")
-			}
-			c := &lyrics.Client{Token: mmAPIKey}
-
-			// search for the track
-			track, err := c.SearchTrack(s.Artist + " " + s.Title)
+			// search for the lyrics for the track
+			s.Lyrics, err = lyrics.Search(s.Artist + " " + s.Title)
 			if err != nil {
-				panic(err)
+				log.Errorf("[%s]: %v", s.Title, err)
 			}
-
-			fmt.Printf("Got track for %s - %s:\n%#v\n\n", s.Artist, s.Title, track)
-
-			// get the lyrics
-			s.Lyrics, err = c.GetTrackLyrics(track)
-			if err != nil {
-				panic(err)
-			}
-
-			fmt.Printf("got song:\n%#v\n\n", s)
 
 			songs = append(songs, s)
 		}

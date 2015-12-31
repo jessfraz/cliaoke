@@ -1,757 +1,908 @@
 [
     {
         "Artist": "2Pac",
+        "Title": "California",
         "File": "2Pac_-_California.mid",
-        "Title": "California"
+        "Lyrics": ""
     },
     {
         "Artist": "2Pac",
+        "Title": "Changes",
         "File": "2Pac_-_Changes.mid",
-        "Title": "Changes"
+        "Lyrics": ""
     },
     {
         "Artist": "2Pac",
+        "Title": "Dear Mama",
         "File": "2Pac_-_Dear_Mama.mid",
-        "Title": "Dear Mama"
+        "Lyrics": ""
     },
     {
         "Artist": "2Pac",
+        "Title": "Until The End Of Time",
         "File": "2Pac_-_Until_The_End_Of_Time.mid",
-        "Title": "Until The End Of Time"
+        "Lyrics": ""
     },
     {
         "Artist": "311",
+        "Title": "All Mixed Up",
         "File": "311_-_All_Mixed_Up.mid",
-        "Title": "All Mixed Up"
+        "Lyrics": ""
     },
     {
         "Artist": "311",
+        "Title": "Down",
         "File": "311_-_Down.mid",
-        "Title": "Down"
+        "Lyrics": ""
     },
     {
         "Artist": "702",
+        "Title": "Where My Girls At",
         "File": "702_-_Where_My_Girls_At.mid",
-        "Title": "Where My Girls At"
+        "Lyrics": ""
     },
     {
         "Artist": "Aaliyah",
+        "Title": "Try Again",
         "File": "Aaliyah_-_Try_Again.mid",
-        "Title": "Try Again"
+        "Lyrics": ""
     },
     {
         "Artist": "Aerosmith",
+        "Title": "Crazy",
         "File": "Aerosmith_-_Crazy.mid",
-        "Title": "Crazy"
+        "Lyrics": ""
     },
     {
         "Artist": "Aerosmith",
+        "Title": "Don't Wanna Miss A Thing",
         "File": "Aerosmith_-_Dont_Wanna_Miss_A_Thing.mid",
-        "Title": "Dont Wanna Miss A Thing"
+        "Lyrics": ""
     },
     {
         "Artist": "Aerosmith",
+        "Title": "Sweet Emotion",
         "File": "Aerosmith_-_Sweet_Emotion.mid",
-        "Title": "Sweet Emotion"
+        "Lyrics": ""
     },
     {
         "Artist": "Alicia Keys",
+        "Title": "Fallin",
         "File": "Alicia_Keys_-_Fallin.mid",
-        "Title": "Fallin"
+        "Lyrics": ""
     },
     {
         "Artist": "Beastie Boys",
+        "Title": "Fight For Your Right To Party",
         "File": "Beastie_Boys_-_Fight_For_Your_Right_To_Party.mid",
-        "Title": "Fight For Your Right To Party"
+        "Lyrics": ""
     },
     {
         "Artist": "Beastie Boys",
+        "Title": "Girls",
         "File": "Beastie_Boys_-_Girls.mid",
-        "Title": "Girls"
+        "Lyrics": ""
     },
     {
         "Artist": "Beastie Boys",
+        "Title": "Intergalactic",
         "File": "Beastie_Boys_-_Intergalactic.mid",
-        "Title": "Intergalactic"
+        "Lyrics": ""
     },
     {
         "Artist": "Blackstreet",
+        "Title": "No Diggity",
         "File": "Blackstreet_-_No_Diggity.mid",
-        "Title": "No Diggity"
+        "Lyrics": ""
     },
     {
         "Artist": "Blink 182",
+        "Title": "",
         "File": "Blink_182_-_.mid",
-        "Title": ""
+        "Lyrics": ""
     },
     {
         "Artist": "Blink 182",
+        "Title": "Adam's Song",
         "File": "Blink_182_-_Adams_Song.mid",
-        "Title": "Adams Song"
+        "Lyrics": ""
     },
     {
         "Artist": "Blink 182",
+        "Title": "All The Small Things",
         "File": "Blink_182_-_All_The_Small_Things.mid",
-        "Title": "All The Small Things"
+        "Lyrics": ""
     },
     {
         "Artist": "Bloodhound Gang",
+        "Title": "The Bad Touch",
         "File": "Bloodhound_Gang_-_The_Bad_Touch.mid",
-        "Title": "The Bad Touch"
+        "Lyrics": ""
     },
     {
         "Artist": "Blues Traveler",
+        "Title": "Run-around",
         "File": "Blues_Traveler_-_Run-around.mid",
-        "Title": "Run-around"
+        "Lyrics": ""
     },
     {
         "Artist": "Blur",
+        "Title": "Song 2",
         "File": "Blur_-_Song_2.mid",
-        "Title": "Song 2"
+        "Lyrics": ""
     },
     {
         "Artist": "Bone",
+        "Title": "Thugs-N-Harmony - Crossroads",
         "File": "Bone-Thugs-N-Harmony_-_Crossroads.mid",
-        "Title": "Thugs-N-Harmony - Crossroads"
+        "Lyrics": ""
     },
     {
         "Artist": "Britney Spears",
+        "Title": "Baby One More Time",
         "File": "Britney_Spears_-_Baby_One_More_Time.mid",
-        "Title": "Baby One More Time"
+        "Lyrics": ""
     },
     {
         "Artist": "Britney Spears",
+        "Title": "Oops I Did It Again",
         "File": "Britney_Spears_-_Oops_I_Did_It_Again.mid",
-        "Title": "Oops I Did It Again"
+        "Lyrics": ""
     },
     {
         "Artist": "Britney Spears",
+        "Title": "Sometimes",
         "File": "Britney_Spears_-_Sometimes.mid",
-        "Title": "Sometimes"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Bubble Bobble",
         "File": "Bubble_Bobble.mid",
-        "Title": "Bubble Bobble"
+        "Lyrics": ""
     },
     {
         "Artist": "Busta Rhymes",
+        "Title": "Break Ya Neck",
         "File": "Busta_Rhymes_-_Break_Ya_Neck.mid",
-        "Title": "Break Ya Neck"
+        "Lyrics": ""
     },
     {
         "Artist": "Cherry Popping Daddies",
+        "Title": "Zuit Suit Riot",
         "File": "Cherry_Popping_Daddies_-_Zuit_Suit_Riot.mid",
-        "Title": "Zuit Suit Riot"
+        "Lyrics": ""
     },
     {
         "Artist": "Chumbawamba",
+        "Title": "Tubthumping",
         "File": "Chumbawamba_-_Tubthumping.mid",
-        "Title": "Tubthumping"
+        "Lyrics": ""
     },
     {
         "Artist": "Coolio",
+        "Title": "C U When You Get There",
         "File": "Coolio_-_C_U_When_You_Get_There.mid",
-        "Title": "C U When You Get There"
+        "Lyrics": ""
     },
     {
         "Artist": "Coolio",
+        "Title": "Fantastic Voyage",
         "File": "Coolio_-_Fantastic_Voyage.mid",
-        "Title": "Fantastic Voyage"
+        "Lyrics": ""
     },
     {
         "Artist": "Coolio",
+        "Title": "Gangstas Paradise",
         "File": "Coolio_-_Gangstas_Paradise.mid",
-        "Title": "Gangstas Paradise"
+        "Lyrics": ""
     },
     {
         "Artist": "Crazytown",
+        "Title": "Butterfly",
         "File": "Crazytown_-_Butterfly.mid",
-        "Title": "Butterfly"
+        "Lyrics": ""
     },
     {
         "Artist": "D12",
+        "Title": "Purple Pills",
         "File": "D12_-_Purple_Pills.mid",
-        "Title": "Purple Pills"
+        "Lyrics": ""
     },
     {
         "Artist": "Daft Punk",
+        "Title": "Around The World",
         "File": "Daft_Punk_-_Around_The_World.mid",
-        "Title": "Around The World"
+        "Lyrics": ""
     },
     {
         "Artist": "Destinys Child",
+        "Title": "Jumpin Jumpin",
         "File": "Destinys_Child_-_Jumpin_Jumpin.mid",
-        "Title": "Jumpin Jumpin"
+        "Lyrics": ""
     },
     {
         "Artist": "Destinys Child",
+        "Title": "Say My Name",
         "File": "Destinys_Child_-_Say_My_Name.mid",
-        "Title": "Say My Name"
+        "Lyrics": ""
     },
     {
         "Artist": "Destinys Child",
+        "Title": "Survivor",
         "File": "Destinys_Child_-_Survivor.mid",
-        "Title": "Survivor"
+        "Lyrics": ""
     },
     {
         "Artist": "Dido",
+        "Title": "Thank You",
         "File": "Dido_-_Thank_You.mid",
-        "Title": "Thank You"
+        "Lyrics": ""
     },
     {
         "Artist": "Dr Dre",
+        "Title": "Keep Their Heads Ringin",
         "File": "Dr_Dre_-_Keep_Their_Heads_Ringin.mid",
-        "Title": "Keep Their Heads Ringin"
+        "Lyrics": ""
     },
     {
         "Artist": "Dr Dre",
+        "Title": "Next Episode",
         "File": "Dr_Dre_-_Next_Episode.mid",
-        "Title": "Next Episode"
+        "Lyrics": ""
     },
     {
         "Artist": "Dr Dre",
+        "Title": "Nuthin But A G Thang",
         "File": "Dr_Dre_-_Nuthin_But_A_G_Thang.mid",
-        "Title": "Nuthin But A G Thang"
+        "Lyrics": ""
     },
     {
         "Artist": "Dr Dre and Eminem",
+        "Title": "Forgot About Dre",
         "File": "Dr_Dre_and_Eminem_-_Forgot_About_Dre.mid",
-        "Title": "Forgot About Dre"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Dr Mario Chill",
         "File": "Dr_Mario_Chill.mid",
-        "Title": "Dr Mario Chill"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Dr Mario Fever",
         "File": "Dr_Mario_Fever.mid",
-        "Title": "Dr Mario Fever"
+        "Lyrics": ""
     },
     {
         "Artist": "Eifel 65",
+        "Title": "Blue",
         "File": "Eifel_65_-_Blue.mid",
-        "Title": "Blue"
+        "Lyrics": ""
     },
     {
         "Artist": "Eminem",
+        "Title": "My Name Is",
         "File": "Eminem_-_My_Name_Is.mid",
-        "Title": "My Name Is"
+        "Lyrics": ""
     },
     {
         "Artist": "Eminem",
+        "Title": "Stan",
         "File": "Eminem_-_Stan.mid",
-        "Title": "Stan"
+        "Lyrics": ""
     },
     {
         "Artist": "Eminem",
+        "Title": "The Real Slim Shady",
         "File": "Eminem_-_The_Real_Slim_Shady.mid",
-        "Title": "The Real Slim Shady"
+        "Lyrics": ""
     },
     {
         "Artist": "Eminem",
+        "Title": "The Way I Am",
         "File": "Eminem_-_The_Way_I_Am.mid",
-        "Title": "The Way I Am"
+        "Lyrics": ""
     },
     {
         "Artist": "Eminem and Dr Dre",
+        "Title": "Guilty Conscience",
         "File": "Eminem_and_Dr_Dre_-_Guilty_Conscience.mid",
-        "Title": "Guilty Conscience"
+        "Lyrics": ""
     },
     {
         "Artist": "F",
+        "Title": "Zero",
         "File": "F-Zero.mid",
-        "Title": "Zero"
+        "Lyrics": ""
     },
     {
         "Artist": "Faith Hill",
+        "Title": "This Kiss",
         "File": "Faith_Hill_-_This_Kiss.mid",
-        "Title": "This Kiss"
+        "Lyrics": ""
     },
     {
         "Artist": "Fatboy Slim",
+        "Title": "Praise You",
         "File": "Fatboy_Slim_-_Praise_You.mid",
-        "Title": "Praise You"
+        "Lyrics": ""
     },
     {
         "Artist": "Fatboy Slim",
+        "Title": "Rockafella Skank",
         "File": "Fatboy_Slim_-_Rockafella_Skank.mid",
-        "Title": "Rockafella Skank"
+        "Lyrics": ""
     },
     {
         "Artist": "Foo Fighters",
+        "Title": "Learn To Fly",
         "File": "Foo_Fighters_-_Learn_To_Fly.mid",
-        "Title": "Learn To Fly"
+        "Lyrics": ""
     },
     {
         "Artist": "Freak Nasty",
+        "Title": "Da Dip",
         "File": "Freak_Nasty_-_Da_Dip.mid",
-        "Title": "Da Dip"
+        "Lyrics": ""
     },
     {
         "Artist": "Fugees",
+        "Title": "Killing Me Softly",
         "File": "Fugees_-_Killing_Me_Softly.mid",
-        "Title": "Killing Me Softly"
+        "Lyrics": ""
     },
     {
         "Artist": "Guns N Roses",
+        "Title": "November Rain",
         "File": "Guns_N_Roses_-_November_Rain.mid",
-        "Title": "November Rain"
+        "Lyrics": ""
     },
     {
         "Artist": "Guns N Roses",
+        "Title": "Paradise City",
         "File": "Guns_N_Roses_-_Paradise_City.mid",
-        "Title": "Paradise City"
+        "Lyrics": ""
     },
     {
         "Artist": "Harvey Danger",
+        "Title": "Flagpole Sitta",
         "File": "Harvey_Danger_-_Flagpole_Sitta.mid",
-        "Title": "Flagpole Sitta"
+        "Lyrics": ""
     },
     {
         "Artist": "J",
+        "Title": "Lo - Waiting For Tonight",
         "File": "J-Lo_-_Waiting_For_Tonight.mid",
-        "Title": "Lo - Waiting For Tonight"
+        "Lyrics": ""
     },
     {
         "Artist": "Jagged Edge and Nelly",
+        "Title": "Where The Party At",
         "File": "Jagged_Edge_and_Nelly_-_Where_The_Party_At.mid",
-        "Title": "Where The Party At"
+        "Lyrics": ""
     },
     {
         "Artist": "Jay",
+        "Title": "Z - Hard Knock Life",
         "File": "Jay-Z_-_Hard_Knock_Life.mid",
-        "Title": "Z - Hard Knock Life"
+        "Lyrics": ""
     },
     {
         "Artist": "Kiss",
+        "Title": "Rock And Roll All Night",
         "File": "Kiss_-_Rock_And_Roll_All_Night.mid",
-        "Title": "Rock And Roll All Night"
+        "Lyrics": ""
     },
     {
         "Artist": "Lauryn Hill",
+        "Title": "That Thing",
         "File": "Lauryn_Hill_-_That_Thing.mid",
-        "Title": "That Thing"
+        "Lyrics": ""
     },
     {
         "Artist": "Led Zeppelin",
+        "Title": "Kashmir",
         "File": "Led_Zeppelin_-_Kashmir.mid",
-        "Title": "Kashmir"
+        "Lyrics": ""
     },
     {
         "Artist": "Led Zeppelin",
+        "Title": "Stairway To Heaven",
         "File": "Led_Zeppelin_-_Stairway_To_Heaven.mid",
-        "Title": "Stairway To Heaven"
+        "Lyrics": ""
     },
     {
         "Artist": "Len",
+        "Title": "Steal My Sunshine",
         "File": "Len_-_Steal_My_Sunshine.mid",
-        "Title": "Steal My Sunshine"
+        "Lyrics": ""
     },
     {
         "Artist": "Limp Bizkit",
+        "Title": "My Generation",
         "File": "Limp_Bizkit_-_My_Generation.mid",
-        "Title": "My Generation"
+        "Lyrics": ""
     },
     {
         "Artist": "Limp Bizkit",
+        "Title": "Nookie",
         "File": "Limp_Bizkit_-_Nookie.mid",
-        "Title": "Nookie"
+        "Lyrics": ""
     },
     {
         "Artist": "Linkin Park",
+        "Title": "Crawling",
         "File": "Linkin_Park_-_Crawling.mid",
-        "Title": "Crawling"
+        "Lyrics": ""
     },
     {
         "Artist": "Lynard Skynard",
+        "Title": "Sweet Home Alabama",
         "File": "Lynard_Skynard_-_Sweet_Home_Alabama.mid",
-        "Title": "Sweet Home Alabama"
+        "Lyrics": ""
     },
     {
         "Artist": "Madonna",
+        "Title": "Beautiful Stranger",
         "File": "Madonna_-_Beautiful_Stranger.mid",
-        "Title": "Beautiful Stranger"
+        "Lyrics": ""
     },
     {
         "Artist": "Marcy Playground",
+        "Title": "Sex and Candy",
         "File": "Marcy_Playground_-_Sex_and_Candy.mid",
-        "Title": "Sex and Candy"
+        "Lyrics": ""
     },
     {
         "Artist": "Marilyn Manson",
+        "Title": "The Beautiful People",
         "File": "Marilyn_Manson_-_The_Beautiful_People.mid",
-        "Title": "The Beautiful People"
+        "Lyrics": ""
     },
     {
         "Artist": "Megadeth",
+        "Title": "99 Ways To Die",
         "File": "Megadeth_-_99_Ways_To_Die.mid",
-        "Title": "99 Ways To Die"
+        "Lyrics": ""
     },
     {
         "Artist": "Metallica",
+        "Title": "Enter Sandman",
         "File": "Metallica_-_Enter_Sandman.mid",
-        "Title": "Enter Sandman"
+        "Lyrics": ""
     },
     {
         "Artist": "N Sync",
+        "Title": "Bye Bye Bye",
         "File": "N_Sync_-_Bye_Bye_Bye.mid",
-        "Title": "Bye Bye Bye"
+        "Lyrics": ""
     },
     {
         "Artist": "N Sync",
+        "Title": "Its Gonna Be Me",
         "File": "N_Sync_-_Its_Gonna_Be_Me.mid",
-        "Title": "Its Gonna Be Me"
+        "Lyrics": ""
     },
     {
         "Artist": "Nelly Furtado",
+        "Title": "Im Like A Bird",
         "File": "Nelly_Furtado_-_Im_Like_A_Bird.mid",
-        "Title": "Im Like A Bird"
+        "Lyrics": ""
     },
     {
         "Artist": "Nirvana",
+        "Title": "Smells Like Teen Spirit",
         "File": "Nirvana_-_Smells_Like_Teen_Spirit.mid",
-        "Title": "Smells Like Teen Spirit"
+        "Lyrics": ""
     },
     {
         "Artist": "No Doubt",
+        "Title": "Just A Girl",
         "File": "No_Doubt_-_Just_A_Girl.mid",
-        "Title": "Just A Girl"
+        "Lyrics": ""
     },
     {
         "Artist": "Notorious BIG",
+        "Title": "Mo Money Mo Problems",
         "File": "Notorious_BIG_-_Mo_Money_Mo_Problems.mid",
-        "Title": "Mo Money Mo Problems"
+        "Lyrics": ""
     },
     {
         "Artist": "Outkast",
+        "Title": "Miss Jackson",
         "File": "Outkast_-_Miss_Jackson.mid",
-        "Title": "Miss Jackson"
+        "Lyrics": ""
     },
     {
         "Artist": "Outkast",
+        "Title": "So Fresh So Clean",
         "File": "Outkast_-_So_Fresh_So_Clean.mid",
-        "Title": "So Fresh So Clean"
+        "Lyrics": ""
     },
     {
         "Artist": "Ozzy Osborne",
+        "Title": "Iron Man",
         "File": "Ozzy_Osborne_-_Iron_Man.mid",
-        "Title": "Iron Man"
+        "Lyrics": ""
     },
     {
         "Artist": "P Diddy",
+        "Title": "Badboy For Life",
         "File": "P_Diddy_-_Badboy_For_Life.mid",
-        "Title": "Badboy For Life"
+        "Lyrics": ""
     },
     {
         "Artist": "Puff Daddy",
+        "Title": "Missing You",
         "File": "Puff_Daddy_-_Missing_You.mid",
-        "Title": "Missing You"
+        "Lyrics": ""
     },
     {
         "Artist": "Punch",
+        "Title": "Out",
         "File": "Punch-Out.mid",
-        "Title": "Out"
+        "Lyrics": ""
     },
     {
         "Artist": "Queen",
+        "Title": "Bohemian Rhapsody",
         "File": "Queen_-_Bohemian_Rhapsody.mid",
-        "Title": "Bohemian Rhapsody"
+        "Lyrics": ""
     },
     {
         "Artist": "Queen",
+        "Title": "We Will Rock You",
         "File": "Queen_-_We_Will_Rock_You.mid",
-        "Title": "We Will Rock You"
+        "Lyrics": ""
     },
     {
         "Artist": "R Kelly and Jay",
+        "Title": "Z - Fiesta",
         "File": "R_Kelly_and_Jay-Z_-_Fiesta.mid",
-        "Title": "Z - Fiesta"
+        "Lyrics": ""
     },
     {
         "Artist": "Radiohead",
+        "Title": "Paranoid Android",
         "File": "Radiohead_-_Paranoid_Android.mid",
-        "Title": "Paranoid Android"
+        "Lyrics": ""
     },
     {
         "Artist": "Rammstein",
+        "Title": "Du Hast",
         "File": "Rammstein_-_Du_Hast.mid",
-        "Title": "Du Hast"
+        "Lyrics": ""
     },
     {
         "Artist": "Red Hot Chili Peppers",
+        "Title": "Californication",
         "File": "Red_Hot_Chili_Peppers_-_Californication.mid",
-        "Title": "Californication"
+        "Lyrics": ""
     },
     {
         "Artist": "Red Hot Chili Peppers",
+        "Title": "Otherside",
         "File": "Red_Hot_Chili_Peppers_-_Otherside.mid",
-        "Title": "Otherside"
+        "Lyrics": ""
     },
     {
         "Artist": "Rednex",
+        "Title": "Cotton-Eye Joe",
         "File": "Rednex_-_Cotton-Eye_Joe.mid",
-        "Title": "Cotton-Eye Joe"
+        "Lyrics": ""
     },
     {
         "Artist": "Run DMC",
+        "Title": "Sucka MCs",
         "File": "Run_DMC_-_Sucka_MCs.mid",
-        "Title": "Sucka MCs"
+        "Lyrics": ""
     },
     {
         "Artist": "Santana",
+        "Title": "Maria Maria",
         "File": "Santana_-_Maria_Maria.mid",
-        "Title": "Maria Maria"
+        "Lyrics": ""
     },
     {
         "Artist": "Santana",
+        "Title": "Smooth",
         "File": "Santana_-_Smooth.mid",
-        "Title": "Smooth"
+        "Lyrics": ""
     },
     {
         "Artist": "Shaggy",
+        "Title": "It Wasnt Me",
         "File": "Shaggy_-_It_Wasnt_Me.mid",
-        "Title": "It Wasnt Me"
+        "Lyrics": ""
     },
     {
         "Artist": "Sisquo",
+        "Title": "Thong Song",
         "File": "Sisquo_-_Thong_Song.mid",
-        "Title": "Thong Song"
+        "Lyrics": ""
     },
     {
         "Artist": "Smash Mouth",
+        "Title": "All Star",
         "File": "Smash_Mouth_-_All_Star.mid",
-        "Title": "All Star"
+        "Lyrics": ""
     },
     {
         "Artist": "Smash Mouth",
+        "Title": "Cant Get Enough Of You Baby",
         "File": "Smash_Mouth_-_Cant_Get_Enough_Of_You_Baby.mid",
-        "Title": "Cant Get Enough Of You Baby"
+        "Lyrics": ""
     },
     {
         "Artist": "Smash Mouth",
+        "Title": "Walking On The Sun",
         "File": "Smash_Mouth_-_Walking_On_The_Sun.mid",
-        "Title": "Walking On The Sun"
+        "Lyrics": ""
     },
     {
         "Artist": "Smashing Pumpkins",
+        "Title": "1979",
         "File": "Smashing_Pumpkins_-_1979.mid",
-        "Title": "1979"
+        "Lyrics": ""
     },
     {
         "Artist": "Smashing Pumpkins",
+        "Title": "Today",
         "File": "Smashing_Pumpkins_-_Today.mid",
-        "Title": "Today"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Sonic The Hedgehog",
         "File": "Sonic_The_Hedgehog.mid",
-        "Title": "Sonic The Hedgehog"
+        "Lyrics": ""
     },
     {
         "Artist": "Spice Girls",
+        "Title": "Wannabe",
         "File": "Spice_Girls_-_Wannabe.mid",
-        "Title": "Wannabe"
+        "Lyrics": ""
     },
     {
         "Artist": "Sting",
+        "Title": "Ill Be Watching You",
         "File": "Sting_-_Ill_Be_Watching_You.mid",
-        "Title": "Ill Be Watching You"
+        "Lyrics": ""
     },
     {
         "Artist": "Stone Temple Pilots",
+        "Title": "Interstate Love Song",
         "File": "Stone_Temple_Pilots_-_Interstate_Love_Song.mid",
-        "Title": "Interstate Love Song"
+        "Lyrics": ""
     },
     {
         "Artist": "Sublime",
+        "Title": "What I Got",
         "File": "Sublime_-_What_I_Got.mid",
-        "Title": "What I Got"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Super Mario Bros",
         "File": "Super_Mario_Bros.mid",
-        "Title": "Super Mario Bros"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Super Mario World",
         "File": "Super_Mario_World.mid",
-        "Title": "Super Mario World"
+        "Lyrics": ""
     },
     {
         "Artist": "TLC",
+        "Title": "Creep",
         "File": "TLC_-_Creep.mid",
-        "Title": "Creep"
+        "Lyrics": ""
     },
     {
         "Artist": "TLC",
+        "Title": "No Scrubs",
         "File": "TLC_-_No_Scrubs.mid",
-        "Title": "No Scrubs"
+        "Lyrics": ""
     },
     {
         "Artist": "TLC",
+        "Title": "Unpretty",
         "File": "TLC_-_Unpretty.mid",
-        "Title": "Unpretty"
+        "Lyrics": ""
     },
     {
         "Artist": "TLC",
+        "Title": "Waterfalls",
         "File": "TLC_-_Waterfalls.mid",
-        "Title": "Waterfalls"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Tetris",
         "File": "Tetris.mid",
-        "Title": "Tetris"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Tetris A",
         "File": "Tetris_A.mid",
-        "Title": "Tetris A"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Tetris B",
         "File": "Tetris_B.mid",
-        "Title": "Tetris B"
+        "Lyrics": ""
     },
     {
         "Artist": "The Beatles",
+        "Title": "Twist And Shout",
         "File": "The_Beatles_-_Twist_And_Shout.mid",
-        "Title": "Twist And Shout"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "The Legend Of Zelda",
         "File": "The_Legend_Of_Zelda.mid",
-        "Title": "The Legend Of Zelda"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "The Legend Of Zelda Underworld",
         "File": "The_Legend_Of_Zelda_Underworld.mid",
-        "Title": "The Legend Of Zelda Underworld"
+        "Lyrics": ""
     },
     {
         "Artist": "The Offspring",
+        "Title": "Pretty Fly",
         "File": "The_Offspring_-_Pretty_Fly.mid",
-        "Title": "Pretty Fly"
+        "Lyrics": ""
     },
     {
         "Artist": "The Offspring",
+        "Title": "Self Esteem",
         "File": "The_Offspring_-_Self_Esteem.mid",
-        "Title": "Self Esteem"
+        "Lyrics": ""
     },
     {
         "Artist": "The Presidents Of The USA",
+        "Title": "Peaches",
         "File": "The_Presidents_Of_The_USA_-_Peaches.mid",
-        "Title": "Peaches"
+        "Lyrics": ""
     },
     {
         "Artist": "The Verve",
+        "Title": "Bittersweet Symphony",
         "File": "The_Verve_-_Bittersweet_Symphony.mid",
-        "Title": "Bittersweet Symphony"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Theme from Beetlejuice",
         "File": "Theme_from_Beetlejuice.mid",
-        "Title": "Theme from Beetlejuice"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Theme from Beverly Hills 90210",
         "File": "Theme_from_Beverly_Hills_90210.mid",
-        "Title": "Theme from Beverly Hills 90210"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Theme from James Bond",
         "File": "Theme_from_James_Bond.mid",
-        "Title": "Theme from James Bond"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Theme from King Of The Hill",
         "File": "Theme_from_King_Of_The_Hill.mid",
-        "Title": "Theme from King Of The Hill"
+        "Lyrics": ""
     },
     {
         "Artist": "",
+        "Title": "Theme from Married With Children",
         "File": "Theme_from_Married_With_Children.mid",
-        "Title": "Theme from Married With Children"
+        "Lyrics": ""
     },
     {
         "Artist": "Trio",
+        "Title": "Da Da Da",
         "File": "Trio_-_Da_Da_Da.mid",
-        "Title": "Da Da Da"
+        "Lyrics": ""
     },
     {
         "Artist": "U2",
+        "Title": "Hold Me Thrill Me Kiss Me Kill Me",
         "File": "U2_-_Hold_Me_Thrill_Me_Kiss_Me_Kill_Me.mid",
-        "Title": "Hold Me Thrill Me Kiss Me Kill Me"
+        "Lyrics": ""
     },
     {
         "Artist": "U2",
+        "Title": "One",
         "File": "U2_-_One.mid",
-        "Title": "One"
+        "Lyrics": ""
     },
     {
         "Artist": "U2",
+        "Title": "Sweetest Thing",
         "File": "U2_-_Sweetest_Thing.mid",
-        "Title": "Sweetest Thing"
+        "Lyrics": ""
     },
     {
         "Artist": "U2",
+        "Title": "Walk On",
         "File": "U2_-_Walk_On.mid",
-        "Title": "Walk On"
+        "Lyrics": ""
     },
     {
         "Artist": "Ugly Kid Joe",
+        "Title": "Cats In The Cradle",
         "File": "Ugly_Kid_Joe_-_Cats_In_The_Cradle.mid",
-        "Title": "Cats In The Cradle"
+        "Lyrics": ""
     },
     {
         "Artist": "Usher",
+        "Title": "You Got It Bad",
         "File": "Usher_-_You_Got_It_Bad.mid",
-        "Title": "You Got It Bad"
+        "Lyrics": ""
     },
     {
         "Artist": "Usher",
+        "Title": "You Remind Me",
         "File": "Usher_-_You_Remind_Me.mid",
-        "Title": "You Remind Me"
+        "Lyrics": ""
     },
     {
         "Artist": "Vengaboys",
+        "Title": "We Like To Party",
         "File": "Vengaboys_-_We_Like_To_Party.mid",
-        "Title": "We Like To Party"
+        "Lyrics": ""
     },
     {
         "Artist": "Veruca Salt",
+        "Title": "Volcano Girls",
         "File": "Veruca_Salt_-_Volcano_Girls.mid",
-        "Title": "Volcano Girls"
+        "Lyrics": ""
     },
     {
         "Artist": "War",
+        "Title": "Lowrider",
         "File": "War_-_Lowrider.mid",
-        "Title": "Lowrider"
+        "Lyrics": ""
     },
     {
         "Artist": "Warren G",
+        "Title": "Regulate",
         "File": "Warren_G_-_Regulate.mid",
-        "Title": "Regulate"
+        "Lyrics": ""
     },
     {
         "Artist": "Weezer",
+        "Title": "Buddy Holly",
         "File": "Weezer_-_Buddy_Holly.mid",
-        "Title": "Buddy Holly"
+        "Lyrics": ""
     },
     {
         "Artist": "Will Smith",
+        "Title": "Miami",
         "File": "Will_Smith_-_Miami.mid",
-        "Title": "Miami"
+        "Lyrics": ""
     },
     {
         "Artist": "Will Smith",
+        "Title": "Wild Wild West",
         "File": "Will_Smith_-_Wild_Wild_West.mid",
-        "Title": "Wild Wild West"
+        "Lyrics": ""
     },
     {
         "Artist": "Xzibit",
+        "Title": "X",
         "File": "Xzibit_-_X.mid",
-        "Title": "X"
+        "Lyrics": ""
     }
 ]
