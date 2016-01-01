@@ -18,7 +18,7 @@ func getSongArtistAndTitle(name string) (artist string, title string) {
 	name = strings.TrimSuffix(name, ".mid")
 	name = strings.Replace(name, "_", " ", -1)
 
-	parts := strings.SplitN(name, "-", 2)
+	parts := strings.SplitN(name, " - ", 2)
 	if len(parts) < 2 {
 		// then the song has no artist, for example "Sonic The Hedgehog"
 		title = strings.TrimSpace(parts[0])
@@ -52,7 +52,7 @@ func main() {
 	}
 	defer out.Close()
 
-	var songs []karaoke.Song
+	songs := map[string]karaoke.Song{}
 	for _, f := range fs {
 		// get all the mid files
 		if strings.HasSuffix(f.Name(), ".mid") {
@@ -61,6 +61,7 @@ func main() {
 			}
 
 			s.Artist, s.Title = getSongArtistAndTitle(f.Name())
+			key := strings.Replace(strings.Replace(strings.ToLower(s.Title), " ", "_", -1), "''", "", -1)
 
 			// search for the lyrics for the track
 			s.Lyrics, err = lyrics.Search(s.Artist + " " + s.Title)
@@ -68,7 +69,13 @@ func main() {
 				log.Errorf("[%s]: %v", s.Title, err)
 			}
 
-			songs = append(songs, s)
+			// make sure the key does not already exist
+			if _, exists := songs[key]; exists {
+				log.Errorf("%s already exists in the map, not adding %s", key, s.Title)
+				continue
+			}
+
+			songs[key] = s
 		}
 	}
 

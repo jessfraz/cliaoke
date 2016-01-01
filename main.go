@@ -4,12 +4,16 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"path/filepath"
+	"sort"
 	"strings"
 	"text/tabwriter"
 
 	"github.com/Sirupsen/logrus"
+	"github.com/docker/docker/pkg/homedir"
 	"github.com/docker/docker/pkg/term"
 	"github.com/jfrazelle/cliaoke/karaoke"
 )
@@ -29,7 +33,8 @@ const (
 	// VERSION is the binary version.
 	VERSION = "v0.1.0"
 
-	midiURI = "https://s3.j3ss.co/cliaoke/midi"
+	defaultSongStore = ".cliaoke"
+	midiURI          = "https://s3.j3ss.co/cliaoke/midi"
 )
 
 var (
@@ -73,31 +78,90 @@ func init() {
 //go:generate go run midi/generate.go
 
 func main() {
-	if songRequested == "" {
-		// list all songs
-		songs, err := getSongList()
-		if err != nil {
-			logrus.Fatal(err)
-		}
+	// get all the songs
+	songs, err := getSongList()
+	if err != nil {
+		logrus.Fatal(err)
+	}
 
+	if songRequested == "" {
 		// print songs table
 		_, stdout, _ := term.StdStreams()
 		w := tabwriter.NewWriter(stdout, 20, 1, 3, ' ', 0)
 
 		// print header
-		fmt.Fprintln(w, "TITLE\tARTIST")
-		for _, song := range songs {
-			fmt.Fprintf(w, "%s\t%s\n", song.Title, song.Artist)
+		fmt.Fprintln(w, "COMMAND\tTITLE\tARTIST")
+
+		// print the keys alphabetically
+		printSorted := func(m map[string]karaoke.Song) {
+			mk := make([]string, len(m))
+			i := 0
+			for k := range m {
+				mk[i] = k
+				i++
+			}
+			sort.Strings(mk)
+
+			for _, key := range mk {
+				fmt.Fprintf(w, "%s\t%s\t%s\n", key, m[key].Title, m[key].Artist)
+			}
 		}
+
+		printSorted(songs)
 		w.Flush()
 		return
 	}
 
 	// play requested song
-	fmt.Printf("song requested was %s", songRequested)
+	fmt.Println("DJ cliaoke on the request line.")
+
+	// find the song
+	song, ok := songs[songRequested]
+	if !ok {
+		logrus.Fatalf("Could not find %s in song list, run with no arguments to see the list of songs available.", songRequested)
+	}
+
+	// download the song if we can't find it locally
+	fmt.Printf("Bringing up the track %s...\n", song.Title)
+	home := homedir.Get()
+	localmid := filepath.Join(home, defaultSongStore, song.File)
+	if _, err := os.Stat(localmid); os.IsNotExist(err) {
+		if err := downloadSong(localmid, song.File); err != nil {
+			logrus.Fatal(err)
+		}
+	}
+
+	// play the song
+	if err := play(localmid); err != nil {
+		logrus.Fatal(err)
+	}
 }
 
-func getSongList() (songs []karaoke.Song, err error) {
+func downloadSong(localpath, remotepath string) error {
+	if err := os.MkdirAll(filepath.Dir(localpath), 0755); err != nil {
+		return fmt.Errorf("creating directory %s failed: %v", filepath.Dir(localpath), err)
+	}
+	f, err := os.Create(localpath)
+	if err != nil {
+		return fmt.Errorf("creating %s failed: %v", localpath, err)
+	}
+	defer f.Close()
+
+	uri := midiURI + "/" + remotepath
+	resp, err := http.Get(uri)
+	if err != nil {
+		return fmt.Errorf("request to %s failed: %v", uri, err)
+	}
+	defer resp.Body.Close()
+
+	if _, err := io.Copy(f, resp.Body); err != nil {
+		return fmt.Errorf("downloading %s to %s failed: %v", uri, localpath, err)
+	}
+
+	return nil
+}
+
+func getSongList() (songs map[string]karaoke.Song, err error) {
 	uri := midiURI + "/manifest.json"
 	resp, err := http.Get(uri)
 	if err != nil {
