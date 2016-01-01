@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cloudflare/cfssl/log"
+	"github.com/Sirupsen/logrus"
 	"github.com/jfrazelle/cliaoke/karaoke"
 	"github.com/jfrazelle/cliaoke/lyrics"
 )
@@ -30,6 +30,12 @@ func getSongArtistAndTitle(name string) (artist string, title string) {
 	// clean up grammar for searching for lyrics
 	title = strings.Replace(title, "Dont", "Don't", -1)
 	title = strings.Replace(title, "Adams", "Adam's", -1)
+	title = strings.Replace(title, "Ill", "I'll", -1)
+	title = strings.Replace(title, "Im", "I'm", -1)
+	title = strings.Replace(title, "Gangstas", "Gangsta's", -1)
+
+	artist = strings.Replace(artist, "Destinys", "Destiny's", -1)
+	artist = strings.Replace(artist, "Dr ", "Dr. ", -1)
 
 	return artist, title
 }
@@ -52,7 +58,13 @@ func main() {
 	}
 	defer out.Close()
 
-	songs := map[string]karaoke.Song{}
+	// get all the songs
+	remoteSongs, err := karaoke.GetSongList("https://s3.j3ss.co/cliaoke/midi/manifest.json")
+	if err != nil {
+		logrus.Fatal(err)
+	}
+
+	localSongs := map[string]karaoke.Song{}
 	for _, f := range fs {
 		// get all the mid files
 		if strings.HasSuffix(f.Name(), ".mid") {
@@ -61,25 +73,29 @@ func main() {
 			}
 
 			s.Artist, s.Title = getSongArtistAndTitle(f.Name())
-			key := strings.Replace(strings.Replace(strings.ToLower(s.Title), " ", "_", -1), "''", "", -1)
+			key := strings.Replace(strings.Replace(strings.ToLower(s.Title), " ", "_", -1), "'", "", -1)
 
-			// search for the lyrics for the track
-			s.Lyrics, err = lyrics.Search(s.Artist + " " + s.Title)
-			if err != nil {
-				log.Errorf("[%s]: %v", s.Title, err)
+			// search for the lyrics for the track if we don't already have it
+			if rs, exists := remoteSongs[key]; exists && rs.Lyrics != "" {
+				s.Lyrics = rs.Lyrics
+			} else {
+				s.Lyrics, err = lyrics.Search(s.Artist + " " + s.Title)
+				if err != nil {
+					logrus.Errorf("[%s]: %v", s.Title, err)
+				}
 			}
 
 			// make sure the key does not already exist
-			if _, exists := songs[key]; exists {
-				log.Errorf("%s already exists in the map, not adding %s", key, s.Title)
+			if _, exists := localSongs[key]; exists {
+				logrus.Errorf("%s already exists in the map, not adding %s", key, s.Title)
 				continue
 			}
 
-			songs[key] = s
+			localSongs[key] = s
 		}
 	}
 
-	b, err := json.MarshalIndent(songs, "", "    ")
+	b, err := json.MarshalIndent(localSongs, "", "    ")
 	if err != nil {
 		panic(err)
 	}

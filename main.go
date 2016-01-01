@@ -1,11 +1,8 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
-	"net/http"
 	"os"
 	"path/filepath"
 	"sort"
@@ -37,6 +34,7 @@ const (
 
 	defaultSongStore = ".cliaoke"
 	midiURI          = "https://s3.j3ss.co/cliaoke/midi"
+	manifestURI      = midiURI + "/manifest.json"
 )
 
 var (
@@ -81,7 +79,7 @@ func init() {
 
 func main() {
 	// get all the songs
-	songs, err := getSongList()
+	songs, err := karaoke.GetSongList(manifestURI)
 	if err != nil {
 		logrus.Fatal(err)
 	}
@@ -128,7 +126,8 @@ func main() {
 	home := homedir.Get()
 	localmid := filepath.Join(home, defaultSongStore, song.File)
 	if _, err := os.Stat(localmid); os.IsNotExist(err) {
-		if err := downloadSong(localmid, song.File); err != nil {
+		remotemid := midiURI + "/" + song.File
+		if err := karaoke.DownloadSong(localmid, remotemid); err != nil {
 			logrus.Fatal(err)
 		}
 	}
@@ -152,53 +151,12 @@ func main() {
 		lines := strings.Split(l, "\n")
 		for _, line := range lines {
 			fmt.Println(line)
-			time.Sleep(3 * time.Second)
+			time.Sleep(2 * time.Second)
 		}
 	}(song.Lyrics)
 
 	// wait
 	wg.Wait()
-}
-
-func downloadSong(localpath, remotepath string) error {
-	if err := os.MkdirAll(filepath.Dir(localpath), 0755); err != nil {
-		return fmt.Errorf("creating directory %s failed: %v", filepath.Dir(localpath), err)
-	}
-	f, err := os.Create(localpath)
-	if err != nil {
-		return fmt.Errorf("creating %s failed: %v", localpath, err)
-	}
-	defer f.Close()
-
-	uri := midiURI + "/" + remotepath
-	resp, err := http.Get(uri)
-	if err != nil {
-		return fmt.Errorf("request to %s failed: %v", uri, err)
-	}
-	defer resp.Body.Close()
-
-	if _, err := io.Copy(f, resp.Body); err != nil {
-		return fmt.Errorf("downloading %s to %s failed: %v", uri, localpath, err)
-	}
-
-	return nil
-}
-
-func getSongList() (songs map[string]karaoke.Song, err error) {
-	uri := midiURI + "/manifest.json"
-	resp, err := http.Get(uri)
-	if err != nil {
-		return songs, fmt.Errorf("request to %s failed: %v", uri, err)
-	}
-	defer resp.Body.Close()
-
-	// decode the body
-	dec := json.NewDecoder(resp.Body)
-	if err := dec.Decode(&songs); err != nil {
-		return songs, fmt.Errorf("decoding response from %s failed: %v", uri, err)
-	}
-
-	return songs, nil
 }
 
 func usageAndExit(message string, exitCode int) {
