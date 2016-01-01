@@ -19,6 +19,9 @@ var (
 	reHTML = regexp.MustCompile(`<.+>`)
 )
 
+// Search scrapes azlyrics.com for song lyrics and does regex magic to clean them up.
+// Beware, your IP can AND will get blocked while running this, but it is only
+// called in `go generate` (see midi/generate.go) so a normal user will never run this.
 func Search(query string) (string, error) {
 	v := url.Values{
 		"q": []string{query},

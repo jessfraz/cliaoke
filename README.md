@@ -1,5 +1,7 @@
 # cliaoke
 
+[![Circle CI](https://circleci.com/gh/jfrazelle/cliaoke.svg?style=svg)](https://circleci.com/gh/jfrazelle/cliaoke)
+
 Command Line Karaoke
 
 ```console

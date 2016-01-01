@@ -1,6 +1,6 @@
 // +build darwin
 
-package main
+package karaoke
 
 import (
 	"fmt"
@@ -10,7 +10,8 @@ import (
 
 const soundfontPath = "/usr/local/share/fluidsynth/generaluser.v.1.44.sf2"
 
-func play(localmid string) error {
+// Play takes a given .midi file and plays it.
+func Play(localmid string) error {
 	cmd := exec.Command("fluidsynth", "-i", soundfontPath, localmid)
 	if out, err := cmd.CombinedOutput(); err != nil {
 		return fmt.Errorf("running `%s %s` failed: %s, %v", cmd.Path, strings.Join(cmd.Args, " "), out, err)

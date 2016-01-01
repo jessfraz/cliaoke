@@ -10,7 +10,9 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
+	"sync"
 	"text/tabwriter"
+	"time"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/pkg/homedir"
@@ -131,10 +133,31 @@ func main() {
 		}
 	}
 
+	var wg sync.WaitGroup
+
 	// play the song
-	if err := play(localmid); err != nil {
-		logrus.Fatal(err)
-	}
+	wg.Add(1)
+	go func(s string) {
+		defer wg.Done()
+		if err := karaoke.Play(s); err != nil {
+			logrus.Error(err)
+		}
+	}(localmid)
+
+	// show the lyrics
+	wg.Add(1)
+	go func(l string) {
+		defer wg.Done()
+
+		lines := strings.Split(l, "\n")
+		for _, line := range lines {
+			fmt.Println(line)
+			time.Sleep(3 * time.Second)
+		}
+	}(song.Lyrics)
+
+	// wait
+	wg.Wait()
 }
 
 func downloadSong(localpath, remotepath string) error {
