@@ -65,7 +65,7 @@ func init() {
 	}
 
 	if version || songRequested == "version" {
-		fmt.Printf("%s", VERSION)
+		fmt.Printf("%s\n", VERSION)
 		os.Exit(0)
 	}
 
