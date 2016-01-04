@@ -13,7 +13,6 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/pkg/homedir"
-	"github.com/docker/docker/pkg/term"
 	"github.com/jfrazelle/cliaoke/karaoke"
 )
 
@@ -86,8 +85,7 @@ func main() {
 
 	if songRequested == "" {
 		// print songs table
-		_, stdout, _ := term.StdStreams()
-		w := tabwriter.NewWriter(stdout, 20, 1, 3, ' ', 0)
+		w := tabwriter.NewWriter(os.Stdout, 20, 1, 3, ' ', 0)
 
 		// print header
 		fmt.Fprintln(w, "COMMAND\tTITLE\tARTIST")
