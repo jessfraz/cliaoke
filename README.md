@@ -1,6 +1,6 @@
 # cliaoke
 
-[![Circle CI](https://circleci.com/gh/jfrazelle/cliaoke.svg?style=svg)](https://circleci.com/gh/jfrazelle/cliaoke)
+[![Travis CI](https://travis-ci.org/jfrazelle/cliaoke.svg?branch=master)](https://travis-ci.org/jfrazelle/cliaoke)
 
 Command Line Karaoke
 
