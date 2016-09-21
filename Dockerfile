@@ -1,5 +1,5 @@
 FROM debian:sid
-MAINTAINER Jessica Frazelle <jess@docker.com>
+MAINTAINER Jessica Frazelle <jess@linux.com>
 
 ENV PATH /go/bin:/usr/local/go/bin:$PATH
 ENV GOPATH /go
@@ -23,7 +23,6 @@ RUN buildDeps=' \
 	&& apt-get update \
 	&& apt-get install -y  $buildDeps --no-install-recommends \
 	&& cd /go/src/github.com/jfrazelle/cliaoke \
-	&& go get -d -v github.com/jfrazelle/cliaoke \
 	&& go build -o /usr/bin/cliaoke . \
 	&& apt-get purge -y --auto-remove $buildDeps \
 	&& rm -rf /var/lib/apt/lists/* \
