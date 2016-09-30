@@ -11,7 +11,7 @@ RUN	apt-get update && apt-get install -y \
 	--no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY . /go/src/github.com/jfrazelle/cliaoke
+COPY . /go/src/github.com/jessfraz/cliaoke
 
 RUN buildDeps=' \
 		gcc \
@@ -22,7 +22,7 @@ RUN buildDeps=' \
 	set -x \
 	&& apt-get update \
 	&& apt-get install -y  $buildDeps --no-install-recommends \
-	&& cd /go/src/github.com/jfrazelle/cliaoke \
+	&& cd /go/src/github.com/jessfraz/cliaoke \
 	&& go build -o /usr/bin/cliaoke . \
 	&& apt-get purge -y --auto-remove $buildDeps \
 	&& rm -rf /var/lib/apt/lists/* \

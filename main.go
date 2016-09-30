@@ -13,7 +13,7 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/pkg/homedir"
-	"github.com/jfrazelle/cliaoke/karaoke"
+	"github.com/jessfraz/cliaoke/karaoke"
 )
 
 const (

@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/jfrazelle/cliaoke/karaoke"
-	"github.com/jfrazelle/cliaoke/lyrics"
+	"github.com/jessfraz/cliaoke/karaoke"
+	"github.com/jessfraz/cliaoke/lyrics"
 )
 
 func getSongArtistAndTitle(name string) (artist string, title string) {

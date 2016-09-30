@@ -1,6 +1,6 @@
 # cliaoke
 
-[![Travis CI](https://travis-ci.org/jfrazelle/cliaoke.svg?branch=master)](https://travis-ci.org/jfrazelle/cliaoke)
+[![Travis CI](https://travis-ci.org/jessfraz/cliaoke.svg?branch=master)](https://travis-ci.org/jessfraz/cliaoke)
 
 Command Line Karaoke
 
@@ -88,4 +88,4 @@ Running `cliaoke` with no arguments will list all the available songs. Once down
 - The lines being printed are not synced with the song. (maybe there is a way to parse the lyric metadata from a .mid file?)
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/cliaoke/README.md)](https://github.com/jfrazelle/cliaoke)
+[![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/cliaoke/README.md)](https://github.com/jessfraz/cliaoke)
