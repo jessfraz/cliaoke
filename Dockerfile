@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:stretch
 MAINTAINER Jessica Frazelle <jess@linux.com>
 
 ENV PATH /go/bin:/usr/local/go/bin:$PATH
