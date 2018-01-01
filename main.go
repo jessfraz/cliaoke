@@ -32,7 +32,7 @@ const (
 `
 
 	defaultSongStore = ".cliaoke"
-	midiURI          = "https://s3.j3ss.co/cliaoke/midi"
+	midiURI          = "https://raw.githubusercontent.com/jessfraz/cliaoke/master/midi"
 	manifestURI      = midiURI + "/manifest.json"
 )
 

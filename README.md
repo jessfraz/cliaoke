@@ -4,21 +4,20 @@
 
 Command Line Karaoke
 
-```console
-$ cliaoke -h
-      _ _             _
-  ___| (_) __ _  ___ | | _____
- / __| | |/ _` |/ _ \| |/ / _ \
-| (__| | | (_| | (_) |   <  __/
- \___|_|_|\__,_|\___/|_|\_\___|
+## Installation
 
- Command Line Karaoke
- Version: v0.1.0
+#### Binaries
 
-  -d    run in debug mode
-  -v    print version and exit (shorthand)
-  -version
-        print version and exit
+- **darwin** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-darwin-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-darwin-amd64)
+- **freebsd** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-freebsd-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-freebsd-amd64)
+- **linux** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-linux-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-linux-amd64) / [arm](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-linux-arm) / [arm64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-linux-arm64)
+- **solaris** [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-solaris-amd64)
+- **windows** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-windows-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.0.0/cliaoke-windows-amd64)
+
+#### Via Go
+
+```bash
+$ go get github.com/jessfraz/cliaoke
 ```
 
 ## Usage
