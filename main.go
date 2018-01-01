@@ -14,6 +14,7 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/pkg/homedir"
 	"github.com/jessfraz/cliaoke/karaoke"
+	"github.com/jessfraz/cliaoke/version"
 )
 
 const (
@@ -26,10 +27,9 @@ const (
 
  Command Line Karaoke
  Version: %s
+ Build: %s
 
 `
-	// VERSION is the binary version.
-	VERSION = "v0.1.0"
 
 	defaultSongStore = ".cliaoke"
 	midiURI          = "https://s3.j3ss.co/cliaoke/midi"
@@ -39,21 +39,26 @@ const (
 var (
 	songRequested string
 	debug         bool
-	version       bool
+	vrsn          bool
 )
 
 func init() {
 	// parse flags
-	flag.BoolVar(&version, "version", false, "print version and exit")
-	flag.BoolVar(&version, "v", false, "print version and exit (shorthand)")
+	flag.BoolVar(&vrsn, "version", false, "print version and exit")
+	flag.BoolVar(&vrsn, "v", false, "print version and exit (shorthand)")
 	flag.BoolVar(&debug, "d", false, "run in debug mode")
 
 	flag.Usage = func() {
-		fmt.Fprint(os.Stderr, fmt.Sprintf(BANNER, VERSION))
+		fmt.Fprint(os.Stderr, fmt.Sprintf(BANNER, version.VERSION, version.GITCOMMIT))
 		flag.PrintDefaults()
 	}
 
 	flag.Parse()
+
+	if vrsn {
+		fmt.Printf("cliaoke version %s, build %s", version.VERSION, version.GITCOMMIT)
+		os.Exit(0)
+	}
 
 	if flag.NArg() >= 1 {
 		songRequested = strings.Join(flag.Args(), " ")
@@ -63,8 +68,8 @@ func init() {
 		usageAndExit("", 0)
 	}
 
-	if version || songRequested == "version" {
-		fmt.Printf("%s\n", VERSION)
+	if songRequested == "version" {
+		fmt.Printf("cliaoke version %s, build %s", version.VERSION, version.GITCOMMIT)
 		os.Exit(0)
 	}
 
