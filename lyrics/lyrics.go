@@ -55,7 +55,7 @@ func Search(query string) (string, error) {
 	html := re.FindStringSubmatch(string(body))
 
 	if len(html) <= 0 {
-		return "", fmt.Errorf("[%s] regex parsing failed for body:\n%s\n", query, body)
+		return "", fmt.Errorf("[%s] regex parsing failed for body: %s", query, body)
 	}
 
 	// strip html tags from decoded lyrics
