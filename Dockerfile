@@ -1,32 +1,36 @@
-FROM golang:alpine as builder
+FROM debian:sid
 MAINTAINER Jessica Frazelle <jess@linux.com>
 
 ENV PATH /go/bin:/usr/local/go/bin:$PATH
 ENV GOPATH /go
 
-RUN	apk add --no-cache \
-	ca-certificates
+RUN	apt-get update && apt-get install -y \
+	ca-certificates \
+	fluidsynth \
+	fluid-soundfont-gm \
+	--no-install-recommends \
+	&& rm -rf /var/lib/apt/lists/*
 
 COPY . /go/src/github.com/jessfraz/cliaoke
 
-RUN set -x \
-	&& apk add --no-cache --virtual .build-deps \
-		git \
+RUN buildDeps=' \
 		gcc \
-		libc-dev \
-		libgcc \
+		golang \
+		git \
+		libc6-dev \
 		make \
+	' \
+	set -x \
+	&& apt-get update \
+	&& apt-get install -y  $buildDeps --no-install-recommends \
 	&& cd /go/src/github.com/jessfraz/cliaoke \
 	&& make static \
 	&& mv cliaoke /usr/bin/cliaoke \
-	&& apk del .build-deps \
+	&& apt-get purge -y --auto-remove $buildDeps \
+	&& rm -rf /var/lib/apt/lists/* \
 	&& rm -rf /go \
 	&& echo "Build complete."
 
-FROM scratch
-
-COPY --from=builder /usr/bin/cliaoke /usr/bin/cliaoke
-COPY --from=builder /etc/ssl/certs/ /etc/ssl/certs
 
 ENTRYPOINT [ "cliaoke" ]
 CMD [ "--help" ]
