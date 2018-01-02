@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"os/user"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -11,10 +12,9 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/docker/pkg/homedir"
 	"github.com/jessfraz/cliaoke/karaoke"
 	"github.com/jessfraz/cliaoke/version"
+	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -126,7 +126,12 @@ func main() {
 
 	// download the song if we can't find it locally
 	fmt.Printf("Bringing up the track %s...\n", song.Title)
-	home := homedir.Get()
+
+	home, err := getHome()
+	if err != nil {
+		logrus.Fatal(err)
+	}
+
 	localmid := filepath.Join(home, defaultSongStore, song.File)
 	if _, err := os.Stat(localmid); os.IsNotExist(err) {
 		remotemid := midiURI + "/" + song.File
@@ -170,4 +175,17 @@ func usageAndExit(message string, exitCode int) {
 	flag.Usage()
 	fmt.Fprintf(os.Stderr, "\n")
 	os.Exit(exitCode)
+}
+
+func getHome() (string, error) {
+	home := os.Getenv(homeKey)
+	if home != "" {
+		return home, nil
+	}
+
+	u, err := user.Current()
+	if err != nil {
+		return "", err
+	}
+	return u.HomeDir, nil
 }

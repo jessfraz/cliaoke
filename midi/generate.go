@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/jessfraz/cliaoke/karaoke"
 	"github.com/jessfraz/cliaoke/lyrics"
+	"github.com/sirupsen/logrus"
 )
 
 func getSongArtistAndTitle(name string) (artist string, title string) {
@@ -59,7 +59,7 @@ func main() {
 	defer out.Close()
 
 	// get all the songs
-	remoteSongs, err := karaoke.GetSongList("https://s3.j3ss.co/cliaoke/midi/manifest.json")
+	remoteSongs, err := karaoke.GetSongList("https://raw.githubusercontent.com/jessfraz/cliaoke/master/midi/manifest.json")
 	if err != nil {
 		logrus.Fatal(err)
 	}

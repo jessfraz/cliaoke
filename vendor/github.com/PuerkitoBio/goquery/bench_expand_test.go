@@ -17,7 +17,9 @@ func BenchmarkAdd(b *testing.B) {
 			sel.Add("h2[title]")
 		}
 	}
-	b.Logf("Add=%d", n)
+	if n != 43 {
+		b.Fatalf("want 43, got %d", n)
+	}
 }
 
 func BenchmarkAddSelection(b *testing.B) {
@@ -34,7 +36,9 @@ func BenchmarkAddSelection(b *testing.B) {
 			sel.AddSelection(sel2)
 		}
 	}
-	b.Logf("AddSelection=%d", n)
+	if n != 43 {
+		b.Fatalf("want 43, got %d", n)
+	}
 }
 
 func BenchmarkAddNodes(b *testing.B) {
@@ -52,7 +56,33 @@ func BenchmarkAddNodes(b *testing.B) {
 			sel.AddNodes(nodes...)
 		}
 	}
-	b.Logf("AddNodes=%d", n)
+	if n != 43 {
+		b.Fatalf("want 43, got %d", n)
+	}
+}
+
+func BenchmarkAddNodesBig(b *testing.B) {
+	var n int
+
+	doc := DocW()
+	sel := doc.Find("li")
+	// make nodes > 1000
+	nodes := sel.Nodes
+	nodes = append(nodes, nodes...)
+	nodes = append(nodes, nodes...)
+	sel = doc.Find("xyz")
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		if n == 0 {
+			n = sel.AddNodes(nodes...).Length()
+		} else {
+			sel.AddNodes(nodes...)
+		}
+	}
+	if n != 373 {
+		b.Fatalf("want 373, got %d", n)
+	}
 }
 
 func BenchmarkAndSelf(b *testing.B) {
@@ -68,5 +98,7 @@ func BenchmarkAndSelf(b *testing.B) {
 			sel.AndSelf()
 		}
 	}
-	b.Logf("AndSelf=%d", n)
+	if n != 44 {
+		b.Fatalf("want 44, got %d", n)
+	}
 }

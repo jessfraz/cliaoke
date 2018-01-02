@@ -25,7 +25,7 @@ $ go get github.com/jessfraz/cliaoke
 **List all songs**
 
 **NOTE:** This does not mean you have all these files locally, when you choose
-a song (if you have no already downloaded it from my s3 bucket) it will be
+a song (if you have no already downloaded it from this repo) it will be
 downloaded for you.
 
 ```console
