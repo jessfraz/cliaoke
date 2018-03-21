@@ -70,9 +70,10 @@ Bringing up the track Hard Knock Life...
 
 This assumes you have setup `fluidsynth` in the following way:
 
+(grab a copy of `GeneralUser_GS_1.44-FluidSynth.zip` from one of the mirrors in  http://www.filewatcher.com/m/GeneralUser_GS_1.44-FluidSynth.zip.28596599-0.html)
+
 ```console
 $ brew install fluidsynth
-$ wget http://www.schristiancollins.com/soundfonts/GeneralUser_GS_1.44-FluidSynth.zip
 $ unzip GeneralUser_GS_1.44-FluidSynth.zip
 $ mkdir -p /usr/local/share/fluidsynth
 $ mv GeneralUser\ GS\ 1.44\ FluidSynth/GeneralUser\ GS\ FluidSynth\ v1.44.sf2 /usr/local/share/fluidsynth/generaluser.v.1.44.sf2
