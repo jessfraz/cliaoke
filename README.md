@@ -8,11 +8,11 @@ Command Line Karaoke
 
 #### Binaries
 
-- **darwin** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-darwin-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-darwin-amd64)
-- **freebsd** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-freebsd-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-freebsd-amd64)
-- **linux** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-linux-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-linux-amd64) / [arm](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-linux-arm) / [arm64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-linux-arm64)
-- **solaris** [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-solaris-amd64)
-- **windows** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-windows-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.0/cliaoke-windows-amd64)
+- **darwin** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-darwin-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-darwin-amd64)
+- **freebsd** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-freebsd-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-freebsd-amd64)
+- **linux** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-amd64) / [arm](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-arm) / [arm64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-arm64)
+- **solaris** [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-solaris-amd64)
+- **windows** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-windows-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-windows-amd64)
 
 #### Via Go
 
