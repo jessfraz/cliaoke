@@ -1,24 +1,68 @@
 # cliaoke
 
-[![Travis CI](https://travis-ci.org/jessfraz/cliaoke.svg?branch=master)](https://travis-ci.org/jessfraz/cliaoke)
+[![Travis CI](https://img.shields.io/travis/jessfraz/cliaoke.svg?style=for-the-badge)](https://travis-ci.org/jessfraz/cliaoke)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/cliaoke)
 
 Command Line Karaoke
 
+ * [Installation](README.md#installation)
+   * [Binaries](README.md#binaries)
+   * [Via Go](README.md#via-go)
+   * [Requirements](README.md#requirements)
+      * [Linux](README.md#linux)
+      * [OSX](README.md#osx)
+ * [Usage](README.md#usage)
+
 ## Installation
 
-#### Binaries
+### Binaries
 
-- **darwin** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-darwin-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-darwin-amd64)
-- **freebsd** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-freebsd-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-freebsd-amd64)
-- **linux** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-amd64) / [arm](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-arm) / [arm64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-linux-arm64)
-- **solaris** [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-solaris-amd64)
-- **windows** [386](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-windows-386) / [amd64](https://github.com/jessfraz/cliaoke/releases/download/v0.2.1/cliaoke-windows-amd64)
+For installation instructions from binaries please visit the [Releases Page](https://github.com/jessfraz/cliaoke/releases).
 
-#### Via Go
+### Via Go
 
-```bash
+```console
 $ go get github.com/jessfraz/cliaoke
 ```
+
+### Requirements
+
+#### Linux
+
+- Download `fluidsynth` and soundfonts on debian this was `fluid-soundfont-gm`.
+
+**OR use my docker image**
+
+```
+$ docker run --rm -it \
+    --device /dev/snd \
+    jess/cliaoke hard_knock_life
+DJ cliaoke on the request line.
+Bringing up the track Hard Knock Life...
+```
+
+
+#### OSX
+
+This assumes you have setup `fluidsynth` in the following way:
+
+(grab a copy of `GeneralUser_GS_1.44-FluidSynth.zip` from one of the mirrors in  http://www.filewatcher.com/m/GeneralUser_GS_1.44-FluidSynth.zip.28596599-0.html)
+
+```console
+$ brew install fluidsynth
+$ unzip GeneralUser_GS_1.44-FluidSynth.zip
+$ mkdir -p /usr/local/share/fluidsynth
+$ mv GeneralUser\ GS\ 1.44\ FluidSynth/GeneralUser\ GS\ FluidSynth\ v1.44.sf2 /usr/local/share/fluidsynth/generaluser.v.1.44.sf2
+```
+
+Running `cliaoke` with no arguments will list all the available songs. Once downloaded the songs are saved in a `~/.cliaoke/` directory.
+
+**Caveats for Mac Users**
+
+- You *must* install `fluidsynth` according to the instructions below.
+- Sometimes the search for lyrics selects the wrong one, *whomp whomp*.
+- The lines being printed are not synced with the song. (maybe there is a way to parse the lyric metadata from a .mid file?)
+
 
 ## Usage
 
@@ -48,44 +92,6 @@ $ cliaoke mo_money_mo_problems
 DJ cliaoke on the request line.
 Bringing up the track Mo Money Mo Problems...
 ```
-
-## Requirements
-
-### Linux
-
-- Download `fluidsynth` and soundfonts on debian this was `fluid-soundfont-gm`.
-
-**OR use my docker image**
-
-```
-$ docker run --rm -it \
-    --device /dev/snd \
-    jess/cliaoke hard_knock_life
-DJ cliaoke on the request line.
-Bringing up the track Hard Knock Life...
-```
-
-
-### OSX
-
-This assumes you have setup `fluidsynth` in the following way:
-
-(grab a copy of `GeneralUser_GS_1.44-FluidSynth.zip` from one of the mirrors in  http://www.filewatcher.com/m/GeneralUser_GS_1.44-FluidSynth.zip.28596599-0.html)
-
-```console
-$ brew install fluidsynth
-$ unzip GeneralUser_GS_1.44-FluidSynth.zip
-$ mkdir -p /usr/local/share/fluidsynth
-$ mv GeneralUser\ GS\ 1.44\ FluidSynth/GeneralUser\ GS\ FluidSynth\ v1.44.sf2 /usr/local/share/fluidsynth/generaluser.v.1.44.sf2
-```
-
-Running `cliaoke` with no arguments will list all the available songs. Once downloaded the songs are saved in a `~/.cliaoke/` directory.
-
-**Caveats for Mac Users**
-
-- You *must* install `fluidsynth` according to the instructions below.
-- Sometimes the search for lyrics selects the wrong one, *whomp whomp*.
-- The lines being printed are not synced with the song. (maybe there is a way to parse the lyric metadata from a .mid file?)
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-29404280-16/cliaoke/README.md)](https://github.com/jessfraz/cliaoke)
