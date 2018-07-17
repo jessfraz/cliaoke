@@ -8,6 +8,7 @@ import (
 	"regexp"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/sirupsen/logrus"
 )
 
 const (
@@ -29,9 +30,14 @@ func Search(query string) (string, error) {
 	uri := fmt.Sprintf("%s?%s", queryURI, v.Encode())
 
 	// start the scrape
-	doc, err := goquery.NewDocument(uri)
+	resp, err := http.Get(uri)
 	if err != nil {
-		return "", fmt.Errorf("scraping new document at %s failed: %v", uri, err)
+		logrus.Fatalf("requesting %s failed: %v", uri, err)
+	}
+	defer resp.Body.Close()
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		logrus.Fatalf("creating document failed: %v", err)
 	}
 
 	link, ok := doc.Find("td").First().Find("a").Attr("href")
@@ -40,7 +46,7 @@ func Search(query string) (string, error) {
 	}
 
 	// get the lyrics link
-	resp, err := http.Get(link)
+	resp, err = http.Get(link)
 	if err != nil {
 		return "", fmt.Errorf("request to %s failed: %v", link, err)
 	}

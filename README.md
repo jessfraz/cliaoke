@@ -10,8 +10,11 @@ Command Line Karaoke
    * [Via Go](README.md#via-go)
    * [Requirements](README.md#requirements)
       * [Linux](README.md#linux)
+         * [Via Docker](README.md#via-docker)
       * [OSX](README.md#osx)
  * [Usage](README.md#usage)
+   * [List all songs](README.md#list-all-songs)
+   * [Play a song](README.md#play-a-song)
 
 ## Installation
 
@@ -31,7 +34,7 @@ $ go get github.com/jessfraz/cliaoke
 
 - Download `fluidsynth` and soundfonts on debian this was `fluid-soundfont-gm`.
 
-**OR use my docker image**
+##### Via Docker
 
 ```
 $ docker run --rm -it \
@@ -66,7 +69,22 @@ Running `cliaoke` with no arguments will list all the available songs. Once down
 
 ## Usage
 
-**List all songs**
+```console
+$ cliaoke -h
+cliaoke -  Command line karaoke.
+
+Usage: cliaoke <command>
+
+Flags:
+
+  -d  enable debug logging (default: false)
+
+Commands:
+
+  version  Show the version information.
+```
+
+### List all songs
 
 **NOTE:** This does not mean you have all these files locally, when you choose
 a song (if you have no already downloaded it from this repo) it will be
@@ -85,7 +103,7 @@ mo_money_mo_problems                Mo Money Mo Problems                Notoriou
 ...
 ```
 
-**Play a song**
+### Play a song
 
 ```console
 $ cliaoke mo_money_mo_problems
