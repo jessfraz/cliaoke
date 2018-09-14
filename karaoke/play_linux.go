@@ -9,20 +9,8 @@ import (
 )
 
 const (
-	soundfontPath    = "/usr/share/sounds/sf2/FluidR3_GM.sf2"
-	fluidsynthBinary = "fluidsynth"
+	soundfontPath = "/usr/share/sounds/sf2/FluidR3_GM.sf2"
 )
-
-// FluidsynthBinaryExists checks if the fluidsynth binary exists.
-func FluidsynthBinaryExists() bool {
-	_, err := exec.LookPath(fluidsynthBinary)
-	if err != nil {
-		return false
-	}
-
-	// Return true when there is no error.
-	return err == nil
-}
 
 // Play takes a given .midi file and plays it.
 func Play(localmid string) error {

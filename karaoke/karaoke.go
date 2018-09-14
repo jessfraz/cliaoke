@@ -6,7 +6,12 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"os/exec"
 	"path/filepath"
+)
+
+const (
+	fluidsynthBinary = "fluidsynth"
 )
 
 // Song holds information about the artist, title and filename for a song.
@@ -56,4 +61,15 @@ func GetSongList(uri string) (songs map[string]Song, err error) {
 	}
 
 	return songs, nil
+}
+
+// FluidsynthBinaryExists checks if the fluidsynth binary exists.
+func FluidsynthBinaryExists() bool {
+	_, err := exec.LookPath(fluidsynthBinary)
+	if err != nil {
+		return false
+	}
+
+	// Return true when there is no error.
+	return err == nil
 }
