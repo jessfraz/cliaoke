@@ -5,16 +5,11 @@
 
 Command Line Karaoke
 
- * [Installation](README.md#installation)
-   * [Binaries](README.md#binaries)
-   * [Via Go](README.md#via-go)
-   * [Requirements](README.md#requirements)
-      * [Linux](README.md#linux)
-         * [Via Docker](README.md#via-docker)
-      * [OSX](README.md#osx)
- * [Usage](README.md#usage)
-   * [List all songs](README.md#list-all-songs)
-   * [Play a song](README.md#play-a-song)
+**Table of Contents**
+
+<!-- toc -->
+
+<!-- tocstop -->
 
 ## Installation
 
