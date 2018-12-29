@@ -9,6 +9,17 @@ Command Line Karaoke
 
 <!-- toc -->
 
+- [Installation](#installation)
+  * [Binaries](#binaries)
+  * [Via Go](#via-go)
+  * [Requirements](#requirements)
+    + [Linux](#linux)
+      - [Via Docker](#via-docker)
+    + [OSX](#osx)
+- [Usage](#usage)
+  * [List all songs](#list-all-songs)
+  * [Play a song](#play-a-song)
+
 <!-- tocstop -->
 
 ## Installation
