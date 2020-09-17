@@ -1,6 +1,7 @@
 # cliaoke
 
-[![Travis CI](https://img.shields.io/travis/jessfraz/cliaoke.svg?style=for-the-badge)](https://travis-ci.org/jessfraz/cliaoke)
+[![make-all](https://github.com/jessfraz/cliaoke/workflows/make%20all/badge.svg)](https://github.com/jessfraz/cliaoke/actions?query=workflow%3A%22make+all%22)
+[![make-image](https://github.com/jessfraz/cliaoke/workflows/make%20image/badge.svg)](https://github.com/jessfraz/cliaoke/actions?query=workflow%3A%22make+image%22)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/jessfraz/cliaoke)
 
 Command Line Karaoke
