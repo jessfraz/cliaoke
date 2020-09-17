@@ -1,3 +1,21 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [cliaoke](#cliaoke)
+  - [Installation](#installation)
+    - [Binaries](#binaries)
+    - [Via Go](#via-go)
+    - [Requirements](#requirements)
+      - [Linux](#linux)
+        - [Via Docker](#via-docker)
+      - [OSX](#osx)
+  - [Usage](#usage)
+    - [List all songs](#list-all-songs)
+    - [Play a song](#play-a-song)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # cliaoke
 
 [![make-all](https://github.com/jessfraz/cliaoke/workflows/make%20all/badge.svg)](https://github.com/jessfraz/cliaoke/actions?query=workflow%3A%22make+all%22)
